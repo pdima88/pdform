@@ -1,0 +1,22 @@
+{
+    "name": "pdima88/pdform",
+    "description": "PHP Dynamic Form Widget",
+    "type": "library",
+    "require": {
+        "pdima88/php-assets": "^2.2",
+        "nette/utils": "^2.5",
+        "pdima88/php-twbshelper": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Puchkin Dmitriy",
+            "email": "pdima88@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "pdima88\\pdform\\": "/"
+        }
+    } 
+}

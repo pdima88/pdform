@@ -92,8 +92,8 @@ class DefaultRenderer {
                     Html::el('input')->type('checkbox')->name($name)
                         ->value(1)->checked(boolval($value)), $attr
                 )
-            )
-        )->addHtml(isset($attr['label']) ? ' '.$attr['label'] : '')
+            )->addHtml(isset($attr['label']) ? ' '.$attr['label'] : '')
+        )
         ->addHtml(static::desc($attr))->setClass('checkbox');
         if (isset($attr['disabled']) && $attr['disabled']) {
             $div->addClass('disabled');

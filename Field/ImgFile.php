@@ -1,9 +1,9 @@
 <?php
 
-namespace pdima88\pdform\Field;
+namespace s4y\form\Field;
 
 use Nette\Utils\Html;
-use pdima88\pdform\Form;
+use s4y\form\Form;
 
 class ImgFile {
 

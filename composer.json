@@ -1,11 +1,11 @@
 {
-    "name": "pdima88/pdform",
+    "name": "s4y/form",
     "description": "PHP Dynamic Form Widget",
     "type": "library",
     "require": {
-        "pdima88/php-assets": "^2.2",
+        "s4y/assets": "^3.0",
         "nette/utils": "^2.5",
-        "pdima88/php-twbshelper": "dev-master"
+        "s4y/twbshelper": "dev-master"
     },
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "pdima88\\pdform\\": "/"
+            "s4y\\form\\": "/"
         }
     } 
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace pdima88\pdform\Render;
+namespace s4y\form\Render;
 
-use pdima88\pdform\Form;
-use pdima88\php\Assets;
+use s4y\form\Form;
+use s4y\Assets;
 use Nette\Utils\Html;
-use pdima88\twbsHelper\Glyphicon;
+use s4y\twbshelper\Glyphicon;
 
 class DefaultRenderer {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace pdima88\pdform;
+namespace s4y\form;
 
 // Класс для защиты формы, пока реализованы методы защита от CSRF
 class Protect {

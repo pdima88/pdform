@@ -1,10 +1,10 @@
 <?php
 
-namespace pdima88\pdform\Field;
+namespace s4y\form\Field;
 
-use pdima88\php\Assets;
+use s4y\Assets;
 use Nette\Utils\Html;
-use pdima88\twbsHelper\Glyphicon;
+use s4y\twbshelper\Glyphicon;
 
 class Datetime extends Date {
 

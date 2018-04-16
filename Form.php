@@ -1,24 +1,24 @@
 <?php
 
-namespace pdima88\pdform;
+namespace s4y\form;
 
 class Form
 {
     static $renderTypes = [
-        'default' => '\\pdima88\\pdform\\Render\\DefaultRenderer',
-        'bootstrapHorizontal' => '\\pdima88\\pdform\\Render\\BootstrapHorizontal'
+        'default' => '\\s4y\\form\\Render\\DefaultRenderer',
+        'bootstrapHorizontal' => '\\s4y\\form\\Render\\BootstrapHorizontal'
     ];
 
     static $fieldTypes = [
-        'checklist' => '\\pdima88\\pdform\\Field\\Checklist',
-        'date' => '\\pdima88\\pdform\\Field\\Date',
-        'dateInput' => '\\pdima88\\pdform\\Field\\DateInput',
-        'datetime' => '\\pdima88\\pdform\\Field\\Datetime',
-        'duration' => '\\pdima88\\pdform\\Field\\Duration',
-        'file' => '\\pdima88\\pdform\\Field\\Form',
-        'imgFile' => '\\pdima88\\pdform\\Field\\ImgFile',
-        'summernote' => '\\pdima88\\pdform\\Field\\SummerNote',
-        'summerNote' => '\\pdima88\\pdform\\Field\\SummerNote',
+        'checklist' => '\\s4y\\form\\Field\\Checklist',
+        'date' => '\\s4y\\form\\Field\\Date',
+        'dateInput' => '\\s4y\\form\\Field\\DateInput',
+        'datetime' => '\\s4y\\form\\Field\\Datetime',
+        'duration' => '\\s4y\\form\\Field\\Duration',
+        'file' => '\\s4y\\form\\Field\\Form',
+        'imgFile' => '\\s4y\\form\\Field\\ImgFile',
+        'summernote' => '\\s4y\\form\\Field\\SummerNote',
+        'summerNote' => '\\s4y\\form\\Field\\SummerNote',
     ];
 
     /**

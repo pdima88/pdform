@@ -166,7 +166,7 @@ class DefaultRenderer {
                 $text = isset($opt['name']) ? $opt['name'] : $opt['title'];
                 if (!empty($attr['filter'])) {
                     foreach ($attr['filter'] as $f => $fname) {
-                        $option->data($f, $opt[$f]);
+                        $option->data(self::normalize_($f), $opt[$f]);
                     }
                 }
             } else {

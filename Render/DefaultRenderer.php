@@ -9,7 +9,7 @@ use pdima88\twbsHelper\Glyphicon;
 
 class DefaultRenderer {
 
-    /** @var S4Y_Form */
+    /** @var Form */
     protected $_form;
 
     static $_fieldRenderers = ['text', 'select', 'checkbox', 'radio', 'input', 'textarea'];
@@ -166,7 +166,7 @@ class DefaultRenderer {
                 $text = isset($opt['name']) ? $opt['name'] : $opt['title'];
                 if (!empty($attr['filter'])) {
                     foreach ($attr['filter'] as $f => $fname) {
-                        $option[' data-'.$f] =$opt[$f];
+                        $option->data($f, $opt[$f]);
                     }
                 }
             } else {

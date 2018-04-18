@@ -5,6 +5,7 @@ namespace s4y\form\Field;
 use s4y\Assets;
 use s4y\twbshelper\Glyphicon;
 use s4y\form\Form;
+use Nette\Utils\Html;
 
 class DateInput {
     static function assets() {

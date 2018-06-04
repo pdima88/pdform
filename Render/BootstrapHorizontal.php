@@ -100,6 +100,7 @@ class BootstrapHorizontal extends DefaultRenderer {
         $form = [];
         if ($this->_form->options['form']) {
             $form = Html::el('form')->setClass('form-horizontal');
+            if ($this->_form->options['id']) $form->id($this->_form->options['id']);
             if ($this->_form->options['action']) $form->action($this->_form->options['action']);
             if ($this->_form->options['enctype']) $form->enctype($this->_form->options['enctype']);
             if ($this->_form->options['method']) $form->method($this->_form->options['method']);

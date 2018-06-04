@@ -183,7 +183,7 @@ class Form
         foreach ($this->fields as $name => &$element) {
             if (!is_array($element)) {
                 if ($this->getValue($name) != $element) $this->errors[$name]['value'] =
-                    '<strong>'.$name.':</strong> имеет неверное значение';
+                    '<strong>'.$name.'</strong> имеет неверное значение';
                 continue;
             }
             $v = $this->getValue($name);
@@ -195,12 +195,12 @@ class Form
                     ) {
                         if ($element['src'] === '' && !self::hasFile($name)) {
                             $this->errors[$name]['required'] = is_string($element['required']) ? $element['required']
-                                : '<strong>' . $element['label'] . ':</strong> является обязательным полем - требуется загрузить файл';
+                                : '<strong>' . $element['label'] . '</strong> является обязательным полем - требуется загрузить файл';
                         }
                     } else
                         if (empty($v) && strlen($v) === 0) {
                             $this->errors[$name]['required'] = is_string($element['required']) ? $element['required']
-                                : '<strong>' . $element['label'] . ':</strong> является обязательным полем - требуется ввести значение';
+                                : '<strong>' . $element['label'] . '</strong> является обязательным полем - требуется ввести значение';
                         }
                 }
             }
@@ -208,12 +208,12 @@ class Form
                 $v = intval($v);
                 if (isset($element['min'])) {
                     if ($v < $element['min']) {
-                        $this->errors[$name]['min'] = '<strong>' . $element['label'] . ':</strong> минимальное допустимое значение - ' . $element['min'];
+                        $this->errors[$name]['min'] = '<strong>' . $element['label'] . '</strong> минимальное допустимое значение - ' . $element['min'];
                     }
                 }
                 if (isset($element['max'])) {
                     if ($v < $element['max']) {
-                        $this->errors[$name]['max'] = '<strong>' . $element['label'] . ':</strong> максимальное допустимое значение - ' . $element['min'];
+                        $this->errors[$name]['max'] = '<strong>' . $element['label'] . '</strong> максимальное допустимое значение - ' . $element['min'];
                     }
                 }
             }

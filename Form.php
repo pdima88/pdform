@@ -2,6 +2,8 @@
 
 namespace s4y\form;
 
+use s4y\form\Field\ImgFile;
+
 class Form
 {
     static $renderTypes = [

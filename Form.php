@@ -195,7 +195,7 @@ class Form
                     if ($element['type'] === 'imgFile' ||
                         $element['type'] === 'file'
                     ) {
-                        if ($element['src'] === '' && !self::hasFile($name)) {
+                        if ((!isset($element['src']) || $element['src'] === '') && !self::hasFile($name)) {
                             $this->errors[$name]['required'] = is_string($element['required']) ? $element['required']
                                 : '<strong>' . $element['label'] . '</strong> является обязательным полем - требуется загрузить файл';
                         }

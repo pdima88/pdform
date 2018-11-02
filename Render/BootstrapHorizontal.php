@@ -28,9 +28,14 @@ class BootstrapHorizontal extends DefaultRenderer {
         //$label = isset($attr['label']) ? $attr['label'] : '';
         $type = (isset($attr['type']) ? $attr['type'] : 'text');
         $renderLabel = true;
+        $renderDesc = true;
 
         if (isset($attr['render']['label'])) $renderLabel = $attr['render']['label'];
-        if ($type == 'hidden' || $type == 'checkbox') $renderLabel = false;
+        if (isset($attr['render']['desc'])) $renderLabel = $attr['render']['desc'];
+        if ($type == 'hidden' || $type == 'checkbox') {
+            $renderLabel = false;
+            $renderDesc = false;
+        }
 
         if ($type == 'summerNote' ||
             isset($attr['render']['fullwidth']) && $attr['render']['fullwidth']) {
@@ -53,7 +58,7 @@ class BootstrapHorizontal extends DefaultRenderer {
 
         if ($type != 'hidden') {
             $decor->addHtml($content);
-            $decor->addHtml(static::desc($attr));
+            if ($renderDesc) $decor->addHtml(static::desc($attr));
             $div = Html::el('div');
             if ($label) $div->addHtml($label);
             $div->addHtml($decor)

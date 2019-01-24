@@ -28,7 +28,7 @@ class Datetime extends Date {
         if ($disabled || !isset($attr['required']) || !$attr['required']) {
             $div->addHtml(
                 Html::el('a')->addHtml(
-                    Glyphicon::calendar
+                    Glyphicon::remove
                 )->setClass('s4yform_field_date-clear')
                     ->href('#')->style('float: right; margin-left: 8px;margin-top:1px;position:relative;color:#444')
             );

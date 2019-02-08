@@ -23,7 +23,7 @@ class BootstrapHorizontal extends DefaultRenderer {
         return $label;
     }
 
-    function decorateField($content, $attr)
+    function decorateField($content, $attr, $name = null)
     {
         //$label = isset($attr['label']) ? $attr['label'] : '';
         $type = (isset($attr['type']) ? $attr['type'] : 'text');
@@ -63,6 +63,7 @@ class BootstrapHorizontal extends DefaultRenderer {
             if ($label) $div->addHtml($label);
             $div->addHtml($decor)
                 ->setClass('form-group'.self::$groupClass);
+            if (isset($this->_form->errors[$name])) $div->addClass('has-error');
             return $div;
         }
         return $content;

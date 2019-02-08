@@ -231,7 +231,7 @@ class DefaultRenderer {
 
     #region Decorators
 
-    function decorateField($content, $attr)
+    function decorateField($content, $attr, $name = null)
     {
         //$label = isset($attr['label']) ? $attr['label'] : '';
         $type = (isset($attr['type']) ? $attr['type'] : 'text');
@@ -245,8 +245,10 @@ class DefaultRenderer {
         }
 
         if ($type != 'hidden' && $type != 'checkbox') {
-            return Html::el('div')->addHtml($label)
+            $formGroup = Html::el('div')->addHtml($label)
             ->addHtml($content)->addHtml(static::desc($attr))->setClass('form-group');
+            if (isset($this->_form->errors[$name])) $formGroup->addClass('has-error');
+            return $formGroup;
         }
         return $content;
     }
@@ -324,7 +326,7 @@ class DefaultRenderer {
                 }
             }
 
-            $html .= $this->decorateField($field, $attr);
+            $html .= $this->decorateField($field, $attr, $name);
         }
 
         return $before.$html.$after;

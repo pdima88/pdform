@@ -102,7 +102,9 @@ class Form
         $html = '';
         foreach ($this->errors as $name => &$err) {
             foreach ($err as $validatorName => &$msg) {
-                $html .= '<li>'.$msg.'</li>';
+                $html .= '<li>'.
+                    (isset($this->fields[$name]['label']) ? $this->fields[$name]['label'].' ': '')
+                    .$msg.'</li>';
             }
             unset($msg);
         }

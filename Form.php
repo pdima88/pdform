@@ -235,7 +235,7 @@ class Form
 
             if (!empty($element['validators'])) {
                 foreach ($element['validators'] as $validatorName => $validatorParams) {
-                    $r = call_user_func($validatorName, $v, $validatorParams);
+                    $r = call_user_func($validatorName, $v, $validatorParams, $this);
                     if ($r !== TRUE && $r !== '') {
                         $this->errors[$name][$validatorName] = is_string($r) ? $r :
                             (is_string($validatorParams) ? $validatorParams : 'ошибка валидации '.$validatorName);

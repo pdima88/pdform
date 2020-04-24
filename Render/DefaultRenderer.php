@@ -302,6 +302,9 @@ class DefaultRenderer {
         $after = (isset($attr['after']) ? $attr['after'] : '');
         unset($attr['after']);
 
+        $body = (isset($attr['body']) ? $attr['body'] : '');
+        unset($attr['body']);
+
         $html = '';
 
         if (isset($attr['multilang']) && $attr['multilang'] &&
@@ -326,7 +329,10 @@ class DefaultRenderer {
                 }
             }
 
-            $html .= $this->decorateField($field, $attr, $name);
+            $html .= $this->decorateField(
+                $body ?
+                str_replace('%input%', $field, $body) : $field,
+                $attr, $name);
         }
 
         return $before.$html.$after;

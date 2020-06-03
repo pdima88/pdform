@@ -47,6 +47,12 @@ class SummerNote {
 
             }
 
+            if (!isset($options['fontSizes'])) {
+                $options['fontSizes'] = ['8', '9', '10', '11', '12', '13', '14', '15', '16',
+                                         '17', '18', '19', '20', '21', '22', '23', '24','26','28','32','36','48','64',
+                                        '72','80','96','120','150'];
+            }
+
             if (!isset($options['popover']['link'])) {
                 $options['popover']['link'] = [
                     ['link', ['linkDialogShow', 'unlink']]

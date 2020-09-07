@@ -26,7 +26,7 @@ class DefaultRenderer {
         if (isset($attr['label']) && $attr['label'] !== false) {
             $content = $attr['label'];
             if (isset($attr['required']) && $attr['required']) {
-                $content .= ' ' . Html::el('span','*')->setClass('required')->title("Это поле обязательно для заполнения");
+                $content .= '&nbsp;' . Html::el('span','*')->setClass('required')->title("Это поле обязательно для заполнения");
             }
             $label = Html::el('label')->addHtml($content);
             if (isset($attr['id']) && $attr['id']) $label->for($attr['id']);

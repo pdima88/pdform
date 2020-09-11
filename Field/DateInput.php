@@ -97,7 +97,10 @@ class DateInput {
                         monthNames: moment.months(),
                         firstDay: moment.localeData().firstDayOfWeek()
                     },'.($value ? '
-                    startDate: "'.date('d.m.Y', strtotime($value)).'",':'').'
+                    startDate: "'.date('d.m.Y', strtotime($value)).'",':
+                    (isset($attr['startDate']) ? '
+                    startDate: "'.date('d.m.Y', strtotime($attr['startDate'])).'",': ''
+                    )).'
                     '. static::getMinMax($attr) .'
                     singleDatePicker: true,
                     autoUpdateInput: false,

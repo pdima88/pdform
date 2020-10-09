@@ -165,7 +165,8 @@ class Checklist {
                         $id.'_group'.$groupId,
                         [
                             'data-group' => $groupId,
-                            'onclick' => 'checklistClick(this);'
+                            'onclick' => 'checklistClick(this);',
+                            'disabled' => $attr['disabled'] ?? false
                         ]);
                 } else {
                     $html .= $label;
@@ -186,6 +187,7 @@ class Checklist {
                                 [
                                     'data-group-id' => $id.'_group'.$groupId,
                                     'onclick' => 'checklistClick(this);',
+                                    'disabled' => $attr['disabled'] ?? false
                                 ]:[]).'</li>';
                 }
                 $html .= '</ul>';
@@ -194,7 +196,9 @@ class Checklist {
                 $itemChecked = isset($values[$val]) && $values[$val];
                 $html .= '<li class="checkbox">'.
                     self::checkbox($name.'['.$val.']', $option, 1, $itemChecked,
-                        $id.'_item'.$val).'</li>';
+                        $id.'_item'.$val, [
+                            'disabled' => $attr['disabled'] ?? false
+                        ]).'</li>';
             }
         }
 

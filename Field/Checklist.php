@@ -130,7 +130,8 @@ class Checklist {
             $html .= '<span class="checkbox" style="display:inline;margin-left:10px;">'
                 . self::checkbox($name.'[all]', $all, 1, $allChecked, $id.'_all',
                     [
-                        'onclick' => 'checklistSelectAll(this);'
+                        'onclick' => 'checklistSelectAll(this);',
+                        'disabled' => $attr['disabled'] ?? false
                     ]).'</span>';
         }
         $html .= '<div id="'.$id.'" class="listbox inline form-control" 

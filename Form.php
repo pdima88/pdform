@@ -271,6 +271,7 @@ class Form
                     $a === 'render' ||
                     $a === 'label' ||
                     $a === 'name' ||
+                    $a === 'none' ||
                     $a === 'value' ||
                     $a === 'options'||
                     $a === 'filter' ||

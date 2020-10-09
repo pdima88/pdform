@@ -125,7 +125,7 @@ class DefaultRenderer {
             $options = ['' => $attr['none']];
         }
         if (isset($attr['options'])) {
-            $options = array_merge($options, $attr['options']);
+            $options = $options + $attr['options'];
         }
         $html = '';
 
